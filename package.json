@@ -1,0 +1,21 @@
+{
+  "name": "uart-waveform-backend",
+  "version": "1.0.0",
+  "description": "离线 UART 数字波形采样与串口帧错误解释后端（API + CLI）",
+  "type": "module",
+  "main": "dist/cli/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"dist/test/**/*.test.js\"",
+    "start": "node dist/cli/index.js serve",
+    "demo": "node dist/cli/index.js demo --decode --print-report"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}
