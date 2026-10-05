@@ -1,0 +1,21 @@
+{
+  "name": "uart-wave-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "离线 UART 数字波形采样与串口帧错误解释后端（教学用）",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/decoder.test.js",
+    "start": "npm run build && node dist/src/api.js",
+    "cli": "npm run build && node dist/src/cli.js",
+    "demo": "npm run build && node dist/src/demo.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^22.0.0"
+  }
+}
+
+
+
